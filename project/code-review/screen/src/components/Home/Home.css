@@ -1,0 +1,25 @@
+.price-container {
+  justify-items: center;
+  align-items: center;
+}
+
+.price-heading {
+  /* border: 1px solid black; */
+}
+
+.price-discrption {
+  /* border: 1px solid green; */
+}
+
+.tabs-button {
+  /* border: 1px solid palevioletred; */
+  /* width: 100%; */
+}
+
+.price-carts {
+  border: 1px solid purple;
+}
+
+.price-cart {
+  border: 1px solid rgb(51, 5, 131);
+}

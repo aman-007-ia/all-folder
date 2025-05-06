@@ -1,0 +1,151 @@
+1 -> Reverse a string without using .reverse().
+Ans -> function reverseString(str) {
+  let reversed = '';
+  
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  
+  return reversed;
+}
+
+// Example
+console.log(reverseString('hello'));  // Output: "olleh"
+
+method 2 ->
+function reverseString(str) {
+  let reversed = '';
+  
+  for (let char of str) {
+    reversed = char + reversed;
+  }
+  
+  return reversed;
+}
+
+// Example
+console.log(reverseString('world'));  // Output: "dlrow"
+
+method -> 3
+function reverseString(str) {
+  if (str === '') {
+    return '';
+  } else {
+    return reverseString(str.substr(1)) + str[0];
+  }
+}
+
+// Example
+console.log(reverseString('chatgpt'));  // Output: "tpgtahc"
+
+2 -> Find the maximum number in an array without using Math.max().
+
+Ans -> function findMax(arr) {
+  if (arr.length === 0) return undefined; // handle empty array
+
+  let max = arr[0]; // assume first element is max initially
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]; // update max if current element is bigger
+    }
+  }
+
+  return max;
+}
+
+// Example usage:
+const numbers = [3, 7, 2, 9, 5];
+console.log(findMax(numbers)); // Output: 9
+
+3 -> Remove duplicates from an array.
+
+Ans -> function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+// Example usage:
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]
+
+method -> 2
+function removeDuplicates(arr) {
+  return arr.filter((item, index) => arr.indexOf(item) === index);
+}
+
+// Example usage:
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]
+
+method -> 3
+function removeDuplicates(arr) {
+  const unique = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!unique.includes(arr[i])) {
+      unique.push(arr[i]);
+    }
+  }
+  return unique;
+}
+
+// Example usage:
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]
+
+4 -> Flatten a nested array ([1, [2, [3, 4]]]) to [1,2,3,4].
+
+Ans -> const nested = [1, [2, [3, 4]]];
+const flatArray = nested.flat(2); // 2 levels deep
+
+console.log(flatArray); // [1, 2, 3, 4]
+
+method -> 2
+function flatten(arr) {
+  let result = [];
+
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      result = result.concat(flatten(element)); // Recursively flatten
+    } else {
+      result.push(element);
+    }
+  });
+
+  return result;
+}
+
+// Example usage:
+const nested = [1, [2, [3, 4]]];
+console.log(flatten(nested)); // [1, 2, 3, 4]
+
+method -> 3
+function flatten(arr) {
+  return arr.reduce((acc, val) => 
+    Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val),
+  []);
+}
+
+const nested = [1, [2, [3, 4]]];
+console.log(flatten(nested)); // [1, 2, 3, 4]
+
+5 -> Write a function to check if two strings are anagrams.
+
+Ans -> function areAnagrams(str1, str2) {
+  // Remove spaces and convert to lowercase for case-insensitive comparison
+  str1 = str1.replace(/\s/g, '').toLowerCase();
+  str2 = str2.replace(/\s/g, '').toLowerCase();
+
+  // If the lengths differ, they cannot be anagrams
+  if (str1.length !== str2.length) {
+    return false;
+  }
+
+  // Sort the characters and compare the sorted strings
+  return str1.split('').sort().join('') === str2.split('').sort().join('');
+}
+
+// Example usage:
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world"));   // false
+
+7 -> Implement a function to chunk an array into groups of a specific size.
