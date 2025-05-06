@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f1e4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #8b4513;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid white;
+}
+
+/* About Us Section - Full Width */
+.about-container {
+  width: 100%; /* Full width */
+  margin: 0; /* Remove any margin */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow if not needed */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.about-container h1,
+.about-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  text-align: justify;
+  max-width: 1200px; /* Restrict max width for better readability */
+  margin: 0 auto 20px auto; /* Center the paragraph and add spacing */
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 1s ease-in-out;
+  animation: slide 9s infinite ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100vw;
+  height: 80vh;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Manual Navigation */
+.navigation-manual {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.manual-btn {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.manual-btn:hover {
+  background: white;
+}
+
+/* Auto Sliding Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Centering the Best Sellers Section */
+section {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+/* Remove bullet points from the list */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #8b4513;
+  color: white;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Chocolate Delight</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/chocolate_logo_1.jpg" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <img src="images/chocolate_logo_1.jpg" alt="Chocolate Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Carousel Section -->
+      <div class="carousel">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="slide1" checked />
+          <input type="radio" name="radio-btn" id="slide2" />
+          <input type="radio" name="radio-btn" id="slide3" />
+
+          <div class="slide first">
+            <img src="images/chocolate_1.jpg" alt="Chocolate 1" />
+          </div>
+          <div class="slide">
+            <img src="images/chocolate_2.jpg" alt="Chocolate 2" />
+          </div>
+          <div class="slide">
+            <img src="images/chocolate_3.jpg" alt="Chocolate 3" />
+          </div>
+        </div>
+
+        <!-- Manual Navigation -->
+        <div class="navigation-manual">
+          <label for="slide1" class="manual-btn"></label>
+          <label for="slide2" class="manual-btn"></label>
+          <label for="slide3" class="manual-btn"></label>
+        </div>
+      </div>
+
+      <!-- Best Sellers Section -->
+      <section class="best-sellers">
+        <h3>Our Best Sellers</h3>
+        <ul>
+          <li>Dark Chocolate Truffles</li>
+          <li>Milk Chocolate Bars</li>
+          <li>White Chocolate Delight</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Chocolate Delight. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
